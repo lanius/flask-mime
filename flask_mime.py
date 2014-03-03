@@ -54,14 +54,6 @@ class Rule(_Rule):
 class Map(_Map):
     """Overridden for returning the custom MapAdapter."""
 
-    def __init__(self, rules=None, default_subdomain='', charset='utf-8',
-                 strict_slashes=True, redirect_defaults=True,
-                 converters=None, sort_parameters=False, sort_key=None,
-                 encoding_errors='replace', host_matching=False):
-        _Map.__init__(self, rules, default_subdomain, charset, strict_slashes,
-                      redirect_defaults, converters, sort_parameters,
-                      sort_key, encoding_errors, host_matching)
-
     def bind(self, server_name, script_name=None, subdomain=None,
              url_scheme='http', default_method='GET', path_info=None,
              query_args=None):
